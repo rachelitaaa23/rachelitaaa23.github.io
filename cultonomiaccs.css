@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    background: #e9f7e9;
+    overflow-x: hidden;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    z-index: 1000;
+}
+header.sticky
+{
+    background: #71b665;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header .logo
+{ 
+    position: relative;
+    font-size: 2em;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+header .logo span
+{
+    color: #3a653d;
+}
+header.sticky .logo span
+{
+    color: #fff;
+}
+header .nav
+{
+    position: relative;
+    display: flex;
+}
+header .nav li
+{
+    list-style: none;
+}
+header .nav li a
+{
+    display: inline-block;
+    color: #000;
+    margin-right: 40px;
+    text-decoration: none;
+    padding: 10px;
+    transition: 1s;
+}
+header .nav li a:hover
+{
+    background: #14571c;
+    border-radius: 30px;
+    border: 1px solid green;
+}
+header.sticky .nav li a:hover
+{
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid green;
+}
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.content .contentBx
+{
+    max-width: 610px;
+    margin-top: 10em;
+}
+.content .contentBx h1
+{
+    font-size: 4em;
+    color: #000;
+    line-height: 1em;
+}
+.content .contentBx h5
+{
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 100;
+    padding-top: 30px;
+    margin: 20px 0;
+}
+.content .contentBx a
+{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #1a5816;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+.content .contentBx a:hover
+{
+    letter-spacing: 2px;
+    border-radius: 0px;
+    border: 1px solid green;
+}
+.content .imgBx .shape
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 15px;
+}
+.content .imgBx .shape1
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 15px;
+}
+.content .imgBx .shape2
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    background: #1a5816;
+    padding: 15px;
+}
+.content .imgBx img
+{
+    width: 600px;
+    height: 600px;
+    transition: 1s;
+}
+.content .imgBx img:hover
+{
+    transform: translateY(-15px);
+}
+/* Mini Menu */
+.flag
+{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 70vh;
+}
+.flag .container
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.flag .container .box
+{
+    display: flex;
+    height: 150px;
+    width: 290px;
+    box-shadow: 9px 9px 18px #d9d9d9,
+                -9px -9px 18px #ffffff;
+    margin-top: 50px;
+    transition: 1s;           
+}
+.flag .container .box:hover
+{
+    transform: translateY(-15px);
+} 
+.flag .container .box .shape
+{
+    height: 90px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid green;
+    background: #267a34;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.flag .container .box .shape img
+{
+    width: 70px;
+    height: auto;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+.flag .container .box .info
+{
+    padding: 10px;
+}
+.flag .container .box .info h5
+{
+    font-size: 1.1em;
+    color:#000;
+    padding: 10px;
+}
+.flag .container .box .info p
+{
+    font-size: 0.9em;
+    color:#000;
+    padding: 10px;
+}
+/* about */
+.about .imgBx .shape
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 15px;
+}
+.about .imgBx .shape1
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 15px;
+}
+.about .imgBx .shape2
+{
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 15px;
+    background: #267a34
+}
+.about .imgBx img
+{
+    width: 700px;
+    height: 700px;
+    transition: 1s;
+}
+.about .imgBx img:hover
+{
+    transform: translateY(-15px);
+}
+.about .contentBx
+{
+    max-width: 600px;
+}
+.about .contentBx h1{
+    font-size: 4em;
+    color: #000;
+    line-height: 1em
+}
+.about .contentBx p
+{
+    font-size: 1em;
+    color: #000;
+    padding-top: 30px;
+    margin: 20px 0;
+}
+.about .contentBx a
+{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #1a5816;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+.about .contentBx a:hover
+{
+    letter-spacing: 2px;
+    border-radius: 0px;
+    border: 1px solid green;
+}
+.menu
+{
+    position: relative;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.menu .box
+{
+    margin-right: 40px;
+    padding: 20px;
+    height: 260px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 9px 9px 18px #d9d9d9,
+                -9px -9px 18px #ffffff;
+}
+.menu .box:hover
+{
+    transform: translateY(-15px);
+}
+.menu .box .imgBx
+{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid green;
+    background: #1a5816;
+    margin-left: 35px;
+}
+.menu .box .imgBx img
+{
+    height: 50px;
+    width: auto;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.menu .box .info h5
+{
+    font-size: 1.1em;
+    color: #000;
+    padding: 10px;
+}
+.menu .box .info p{
+    font-size: 0.9em;
+    color: #000;
+    padding: 10px;
+    margin-right: 10px;
+}
+.menu .box .info .rating{
+    font-size: 25px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+.menu .box .info .rating a,
+.menu .box .info .rating label{
+    float: right;
+    color: #b8b7a9;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.menu .box .info .rating label:hover ~ label,
+.menu .box .info .rating input:focusr ~ label,
+.menu .box .info .rating label:hover,
+.menu .box .info .rating a:hover,
+.menu .box .info .rating a:hover ~ a,
+.menu .box .info .rating a:focus,
+.menu .box .info .rating a:focus ~ a{
+    color: #1a5816;
+    cursor: pointer;
+}
+.menu .box .info .btn
+{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #1a5816;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 1s;
+}
+.menu .box .info .btn:hover
+{
+    border-radius: 0px;
+    border: 1px solid green;
+}
+/*Blog*/
+.blog .imgBx img{
+    
+    height: auto;
+    transition: 1s;
+}
+.blog .imgBx img:hover
+{
+    transform: translateY(-15px);
+}
+.blog .contentBx
+{
+    max-width: 600px;
+}
+.blog .contentBx h1
+{
+    font-size: 4em;
+    color: #000;
+    line-height: 1em;
+}
+.blog .contentBx p{
+    font-size: 1em;
+    color: #000;
+    padding-top: 30px;
+    margin: 20px 0;
+}
+.blog .contentBx a
+{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #1a5816;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+.blog .contentBx a:hover
+{
+    letter-spacing: 2px;
+    border-radius: 0px;
+    border: 1px solid green;
+}
+/* Contact Us */
+.contact
+{
+    position: relative;
+    width: 100%;
+    margin: 20px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .formBx
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .formBx form
+{
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 75px;
+}
+.contact .formBx form h2
+{
+    color: #000;
+    font-weight: 500;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.contact .formBx form .inputBx
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+.contact .formBx form .inputBx:last-child
+{
+    margin-bottom: 0px;
+}
+.contact .formBx form .inputBx input,
+.contact .formBx form .inputBx textarea
+{
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: #000;
+    padding-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    border-bottom: 2px solid green;
+    resize: none;
+}
+.contact .formBx form .inputBx textarea
+{
+    height: 100px;
+}
+.contact .formBx form .inputBx input[type="submit"]
+{
+    width: 100px;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #1a5816;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 1s;
+    border: none;
+}
+.contact .formBx form .inputBx input[type="submit"]:hover
+{
+    letter-spacing: 2px;
+    border-radius: 0px;
+    border: 1px solid green;
+}
+.contact .formBx form .inputBx span
+{
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block;
+    pointer-events: none;
+    letter-spacing: 1px;
+    color: #1a5816;
+    transition: all 0.2s;
+}
+.contact .formBx form .inputBx input:focus ~ span,
+.contact .formBx form .inputBx textarea:focus ~ span,
+.contact .formBx form .inputBx input:valid ~ span,
+.contact .formBx form .inputBx textarea:valid ~ span
+{
+    transform: translateY(-24px);
+    font-size: 14px;
+}
+.contact .imgBx
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+/*Footer*/
+.footer
+{
+    background: #61935e;
+    padding: 50px;
+    width: 100%;
+    height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    color: #fff;
+}
+.footer .name
+{
+    max-width: 400px;
+    margin-left: 20px;
+}
+.footer .name .logo{
+    position: relative;
+    font-size: 2em;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.footer .name .logo span
+{
+    color: #fff;
+
+}
+.footer .name p
+{
+    position: relative;
+    font-size: 1em;
+    color: #ffffff;
+}
+.footer .our_service h4
+{
+    font-size: 2em;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+.footer .our_service ul li
+{
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 1em;
+    color: #ffffff;
+}
+.footer .our_company h4
+{
+    font-size: 2em;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+.footer .our_company ul li
+{
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 1em;
+    color: #ffffff;
+}
+.footer .address h4
+{
+    font-size: 2em;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+.footer .address ul li
+{
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 1em;
+    color: #ffffff;
+}
+@media screen and (max-width: 1200px)
+{
+    .banner .content .imgBx
+    {
+        margin-right: -5rem;
+    }
+    .about
+    {
+        flex-direction: column;
+    }
+    .about .contentBx
+    {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .menu .box{
+        margin-top: 50px;
+    }
+    .flag .box{
+        margin-top: 50px;
+    }
+    .blog{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer .name .logo{
+        font-size: 1.5em;
+    }
+    .footer .name p{
+        font-size: 0.8em;
+    }
+    .footer .our_service h4{
+        font-size: 1.5em;
+
+    }
+    .footer .our_service ul li{
+        font-size: 0.8em;
+    }
+    footer .our_company h4{
+        font-size: 1.5em;
+
+    }
+    .footer .our_company ul li{
+        font-size: 0.8em;
+    }
+    footer .address h4{
+        font-size: 1.5em;
+
+    }
+    .footer .address ul li{
+        font-size: 0.8em;
+    }
+    .flag .container
+    {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 1000px)
+{
+    header
+    {
+        padding: 15px 40px;
+    }
+    section
+    {
+        padding: 40px;
+    }
+    header .nav
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.153);
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+
+    }
+    header .nav.active
+    {
+        display: flex;
+    }
+    header .nav li a
+    {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    header .nav li a:hover{
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        letter-spacing: 2px;
+    }
+    .toggleMenu
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .toggleMenu.nav.active
+    {
+        background: url(close.png);
+        filter: invert(1);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+    .flag .container
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .banner .content{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .content .contentBx
+    {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .content .imgBx
+    {
+        margin-top: 30px;
+    }
+    .content .imgBx img
+    {
+        width: 300px;
+        height: 300px;
+    }
+    .content .imgBx
+    {
+        display: none;
+    }
+    .contact .formBx
+    {
+        width: 100%;
+    }
+    .flag .container
+    {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 750px)
+{
+    .flag .container
+    {
+        display: none;
+    }
+    .about .contentBx h1
+    {
+        font-size: 2em;
+    }
+    .about .contentBx p
+    {
+        font-size: 0.9em;
+    }
+    .about .imgBx img
+    {
+        width: 300px;
+        height: 300px;
+    }
+    .blog .contentBx h1{
+        font-size: 2em;
+    }
+    .blog .contentBx p{
+        font-size: 0.9em;
+
+    }
+    .footer{
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+    }
+}
